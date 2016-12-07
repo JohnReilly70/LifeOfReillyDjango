@@ -1,0 +1,37 @@
+{% load staticfiles %}
+
+<html>
+
+      <head>
+            <title>Life Of Reilly John</title>
+            <link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet">
+            <link rel="stylesheet" href="{% static 'CSS/mainstyle.css' %}">
+            <script src="{% static 'Javascript/scripts.js'%}"></script>
+      </head>
+
+
+      <body>
+          <header>
+              <h1 id="Menu" onclick="openNav()"><b>&#9776;</b></h1>
+          </header>
+
+          <div id="Sidenav" class="sidenav">
+              <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+              <a href="/">Home</a>
+              <a href="/#Introduction">Introduction</a>
+              <a href="/#GitHub">GitHub</a>
+              <a href="/#Projects">Project Examples</a>
+              <a href="/#Contact-Info">Contact</a>
+              <a href="/Secret-Area.html">Secret Area</a>
+          </div>
+
+
+          {% block content %}
+          {% endblock %}
+
+          <footer>
+          <a href="#"><p>LifeofReillyJohn.com</p></a>
+
+      </footer>
+    </body>
+</html>

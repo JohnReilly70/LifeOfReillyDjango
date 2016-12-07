@@ -1,0 +1,185 @@
+
+/*----------------------Main Page Style-----------------------------*/
+body{
+font-family: 'Abel', sans-serif;
+}
+
+p {
+ text-align: center;
+ font-size: 10px;
+}
+
+h1,h2,h3{
+   text-align:center;
+}
+
+header {
+    position: fixed;
+    z-index: 1;
+    margin: 0 0 0 90%;
+}
+
+div {
+    padding: 5px 0;
+}
+
+#Menu {
+    cursor: hand;
+}
+
+img[title="John"] {
+    display: block;
+    max-width: 20%;
+    min-width: 10%;
+    margin: 0% auto 0 auto;
+    border-radius: 50%;
+    -webkit-filter: grayscale(0%);
+    -webkit-transition: .5s ease-in-out;
+    -moz-filter: grayscale(0%);
+    -moz-transition: .5s ease-in-out;
+    -o-filter: grayscale(0%);
+    -o-transition: .5s ease-in-out;
+
+}
+
+img[title="John"]:hover {
+   -webkit-filter: grayscale(100%);
+  -webkit-transition: .5s ease-in-out;
+  -moz-filter: grayscale(100%);
+  -moz-transition: .5s ease-in-out;
+  -o-filter: grayscale(100%);
+  -o-transition: .5s ease-in-out;
+}
+
+#Details a {
+    color: #028900;
+}
+
+#MainPage div {
+    width: 50%;
+    border-bottom: 1px solid #028900;
+    padding: 2%;
+    margin: 1% auto;
+}
+
+#MainPage Div:last-child {
+    border: none;
+}
+
+#MainPage h1 {
+    font-size: 200%;
+    text-decoration: underline;
+}
+
+#MainPage p {
+    font-size: 1.25em;
+
+}
+
+#MainPage img {
+    display: block;
+    max-width: 20%;
+    min-width: 10%;
+    margin: 0 auto 1% auto;
+}
+
+#Contact-Info {
+    text-align: center;
+}
+
+#Contact-Info img {
+    display: inline-block;
+    align: center;
+    max-width: 10%;
+    min-width: 10%;
+    margin: 0 auto 0 auto;
+}
+
+
+#Projects {
+    display: block;
+    text-align: center;
+    margin: 2%;
+}
+
+a:-webkit-any-link{
+text-decoration:none ;
+color: #028900;
+}
+
+#Blog, #ReturnHome {
+    color: #028900;
+    display: block;
+    text-align: center;
+    font-size: 200%;
+}
+
+/*-----------------FOOTER--------------------*/
+
+body {
+      margin: 0px;
+      padding: 0px;
+     }
+
+footer {
+  text-align: center;
+  color: #ccc;
+  margin: 0 0 0 0;
+  padding: 0.5em 0;
+}
+
+footer a {
+color: #028900;
+  text-decoration: none;
+}
+
+p{
+font-size: 2em;
+}
+
+
+/*----------------------SIDE BAR STYLE-----------------------------*/
+/* The side navigation menu */
+.sidenav {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0;
+    left: 0;
+    background-color: #028900;
+    border-right: 10px solid #adff00;
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+/* The navigation menu links */
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #adff00;
+    display: block;
+    transition: 0.3s
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover, .offcanvas a:focus{
+    color: #00ff83;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}

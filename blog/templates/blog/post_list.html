@@ -1,32 +1,14 @@
-    <html>
+{% extends 'blog/base.html' %}
 
-      <head>
-            <title>Life Of Reilly John</title>
-            <link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet">
-            <link rel="stylesheet" href="CSS/mainstyle.css">
-            <script src="Javascript/scripts.js"></script>
-      </head>
+{% load staticfiles %}
 
 
-      <body>
-          <header>
-              <h1 id="Menu" onclick="openNav()"><b>&#9776;</b></h1>
-          </header>
+    {% block content %}
 
-
-          <div id="Sidenav" class="sidenav">
-              <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-              <a href="#">Home</a>
-              <a href="#Introduction">Introduction</a>
-              <a href="#GitHub">GitHub</a>
-              <a href="#Projects">Project Examples</a>
-              <a href="#Contact-Info">Contact</a>
-              <a href="Secret-Area.html">Secret Area</a>
-          </div>
 
 
               <div id="Details">
-                  <img src="Images/VikingHelmet.jpg" title="John" alt="John">
+                  <img src="{% static 'Images/VikingHelmet.jpg' %}"  title="John" alt="John">
                   <h1 id="Name">John Reilly</h1>
                   <h2 id="Title">Aspiring Software Engineer</h2>
                   <h3 id="Twitter"><a href="https://twitter.com/LifeOfReillyJ/" rel="nofollow" target="_blank">@LifeOfReillyJ</a></h3>
@@ -35,9 +17,6 @@
 
           <section id="MainPage">
               <div id="Introduction">
-                  <?php
-                   echo "Hello World!";
-                    ?>
                   <p>Currently an Instrument Engineer for a Multinational Oil & Gas service company.
                   I hold a MSc with distinction in Eletronic and Eletrical Engineering from Strathclyde University.</p>
                   <p>Looking to get into the Software Engineering field. I program mainly in Python but have some experience with MySQL, Java, HTML & CSS.
@@ -50,7 +29,7 @@
 
               <div id="GitHub">
                   <p>Click the Git Hub icon to go to my Repositry</p>
-                  <a href="https://github.com/JohnReilly70"><img src="Images/github-mark.jpg" alt="github-mark"></a>
+                  <a href="https://github.com/JohnReilly70"><img src="{% static 'Images/github-mark.jpg' %}" alt="github-mark"></a>
               </div>
 
               <div id="Projects">
@@ -64,16 +43,15 @@
               </div>
 
               <div id="Contact-Info">
-                  <a href="https://www.linkedin.com/in/john-reilly-96b80660"><img src="Images/LinkedIn.png"></a>
-                  <a href="https://www.youtube.com/channel/UCb1QNLsQDqLIGE97rDQcsvg"><img src="Images/YouTube.jpg"></a>
-                  <a href="https://twitter.com/LifeOfReillyJ/"><img src="Images/Twitter.png"></a>
+                  <a href="https://www.linkedin.com/in/john-reilly-96b80660"><img src="{% static 'Images/LinkedIn.png' %}"></a>
+                  <a href="https://www.youtube.com/channel/UCb1QNLsQDqLIGE97rDQcsvg"><img src="{% static 'Images/YouTube.jpg' %}"></a>
+                  <a href="https://twitter.com/LifeOfReillyJ/"><img src="{% static 'Images/Twitter.png' %}"></a>
               </div>
+
+              <div id="Blog">
+                  <a href="blog.html">Click on this to read my Blog</a>
+              </div>
+
+
           </section>
-      </body>
-
-      <footer>
-          <a href="#"><p>LifeofReillyJohn.com</p></a>
-
-      </footer>
-
-    </html>
+    {% endblock %}
