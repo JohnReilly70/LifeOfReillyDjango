@@ -5,5 +5,6 @@ urlpatterns = [
     url(r'^$', views.post_list, name='post_list'),
     url(r'blog', views.blog, name='post_list'),
     url(r'password', views.password, name='password_generator'),
-    url(r'Secret-Area', views.Secret_Area)
+    url(r'Secret-Area', views.Secret_Area),
+    url(r'Password-Generator', views.password)
 ]
