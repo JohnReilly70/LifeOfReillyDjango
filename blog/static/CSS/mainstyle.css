@@ -113,7 +113,18 @@ color: #028900;
     text-align: center;
     font-size: 200%;
 }
+#password_wording{
+    text-align: center;
+    margin-left:auto;
+    margin-right:auto;
+}
 
+#submit, #length_password{
+    display: block;
+    margin-bottom: 1%;
+    margin-left:auto;
+    margin-right:auto;
+}
 /*-----------------FOOTER--------------------*/
 
 body {

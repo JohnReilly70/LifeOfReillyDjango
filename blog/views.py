@@ -12,3 +12,6 @@ def blog(request):
 
 def Secret_Area(request):
     return render(request, 'blog/Secret-Area.html', {})
+
+def password(request):
+    return render(request, 'blog/password_generator.html', {})
