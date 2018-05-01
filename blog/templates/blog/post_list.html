@@ -8,6 +8,11 @@
 
 
               <div id="Details">
+                {% if user.is_authenticated %}
+                 <p>Hi {{ user.username }}!</p>
+                {% else %}
+                  <p><a href="{% url 'login' %}">You are not logged in, click here to login</a></p>
+                {% endif %}
                   <img src="{% static 'Images/VikingHelmet.jpg' %}"  title="John" alt="John">
                   <h1 id="Name">John Reilly</h1>
                   <h2 id="Title">Aspiring Software Engineer</h2>
@@ -16,7 +21,7 @@
               </div>
 
           <section id="MainPage">
-              <div id="Introduction">
+              <div id="test">
                   <p>Currently an Instrument Engineer for a Multinational Oil & Gas service company.
                   I hold a MSc with distinction in Eletronic and Eletrical Engineering from Strathclyde University.</p>
                   <p>Looking to get into the Software Engineering field. I program mainly in Python but have some experience with MySQL, Java, HTML & CSS.
