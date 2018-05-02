@@ -13,17 +13,18 @@ class password_gen:
     def func_password_gen(self):
         '''
         Uses random.choices with string module which creates a new list from the list in the string module.
-
         First random.choices deals with the requirement of uppercase chase.
         Second random.choices deals with requirement of special chars.
         Third random.choices deals with any remaining characters required. Have to concatenate string modules are there
             are none without whitespace chars.
-
         Finishes by running function which converts the list to a string after it being randomly shuffled
         '''
-        self.char_array.extend(random.choices(string.ascii_uppercase,k=self.max_upper))
-        self.char_array.extend(random.choices(string.punctuation, k=self.special))
-        self.char_array.extend(random.choices(string.ascii_letters+string.digits+string.punctuation, k=self.pass_len-self.max_upper-self.special))
+        for x in range(self.max_upper):
+          self.char_array.extend(random.choice(string.ascii_uppercase))
+        for x in range(self.special):
+          self.char_array.extend(random.choice(string.punctuation))
+        for x in range((self.pass_len-self.max_upper-self.special)):
+          self.char_array.extend(random.choice(string.ascii_letters+string.digits+string.punctuation))
         self.conv_list_to_string()
 
     def conv_list_to_string(self):
@@ -31,7 +32,6 @@ class password_gen:
         Uses random.shuffle to make sure initial characters aren't the upper and punctuation which were
             initialised first.
         Joins list together to create a string
-
         """
 
         random.shuffle(self.char_array)
@@ -54,6 +54,4 @@ class password_gen:
 
     def __add__(self, other):
         return self.password + other.password
-
-
 
