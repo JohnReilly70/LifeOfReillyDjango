@@ -21,6 +21,11 @@ def blog(request):
 def Secret_Area(request):
     return render(request, 'blog/Secret-Area.html', {})
 
+@decorators.login_required
+def Super_Secret_Area(request):
+    return render(request, 'blog/super-secret-area.html')
+
+
 # def password(request):
 #     return render(request, 'blog/password_generator.html', {})
 
@@ -53,3 +58,4 @@ def signup(request):
     else:
         form = SignUpForm()
     return render(request, 'signup.html', {'form': form})
+
